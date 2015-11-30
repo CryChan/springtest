@@ -37,7 +37,7 @@ task createJavaProject(){
 //    file('src/test/resources/spring.xml').createNewFile()
 }
 
-//    创建一个readme
+//创建一个readme
 task createREADME(){
     file("README.md").createNewFile()
 }

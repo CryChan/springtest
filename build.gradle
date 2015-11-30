@@ -57,3 +57,8 @@ subprojects{
         testCompile group: 'junit', name: 'junit', version: '4.11'
     }
 }
+
+//创建一个.gitignore
+task createREADME(){
+    file(".gitignore").createNewFile()
+}
