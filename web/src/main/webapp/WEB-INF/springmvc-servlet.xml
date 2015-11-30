@@ -35,13 +35,13 @@
     <context:component-scan base-package="com.viewmap" />
 
     <!--web.xml中的自定义view-->
-    <!--<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
-        <!--<property name="exceptionMappings">-->
-            <!--<props>-->
-                <!--<prop key="">WEB-INF/html/error.html</prop>-->
-            <!--</props>-->
-        <!--</property>-->
-    <!--</bean>-->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="">WEB-INF/html/error.html</prop>
+            </props>
+        </property>
+    </bean>
 
     <!--多视图处理器-->
     <bean class="com.viewmap.common.MixedViewResolver">

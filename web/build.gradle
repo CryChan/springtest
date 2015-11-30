@@ -41,3 +41,8 @@ task createJavaProject(){
 task createREADME(){
     file("README.md").createNewFile()
 }
+
+
+war{
+    webAppDirName = 'src/main/webapp'
+}
