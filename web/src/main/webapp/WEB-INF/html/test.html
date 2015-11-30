@@ -1,0 +1,24 @@
+<!Doctype html>
+<html ng-app>
+<head>
+    <meta charset="utf-8">
+    <script src="/js/angularjs/angular.min.js"></script>
+</head>
+<body onload="autoclick()">
+<a href="http://www.jb51.net" id="auto" target="_blank">你也可以手动点击</a>
+<div>
+    <div ng-init="list = ['Chrome', 'Safari', 'Firefox', 'IE'] ">
+        <input ng-model="list" ng-list> <br>
+        <input ng-model="list" ng-list> <br>
+        <pre>list={{list}}</pre> <br>
+        <ol>
+            <li ng-repeat="item in list">
+                {{item}}
+            </li>
+        </ol>
+    </div>
+</div>
+</body>
+</html>
+
+
