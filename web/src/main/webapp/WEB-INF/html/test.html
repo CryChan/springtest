@@ -1,11 +1,26 @@
-<!Doctype html>
-<html ng-app>
 <head>
     <meta charset="utf-8">
     <script src="/static/js/angularjs/angular.min.js"></script>
+    <script src="/static/js/test.js"></script>
+    <script src="/static/js/service.js"></script>
 </head>
 <body onload="autoclick()">
 <a href="http://www.jb51.net" id="auto" target="_blank">你也可以手动点击</a>
+<input type="button" value="点一下" ng-click="show()">
+<div ng-show="showjson()">
+    <table>
+        <tr>
+            <td>fruit</td>
+            <td>price($ pre kg)</td>
+            <td>country</td>
+        </tr>
+        <tr ng-repeat="fruit in fruits">
+            <td>[[fruit.name]]</td>
+            <td>[[fruit.price]]</td>
+            <td>[[fruit.country]]</td>
+        </tr>
+    </table>
+</div>
 <div>
     <div ng-init="list = ['Chrome', 'Safari', 'Firefox', 'IE'] ">
         <input ng-model="list" ng-list> <br>
