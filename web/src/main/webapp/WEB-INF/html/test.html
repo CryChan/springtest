@@ -1,8 +1,10 @@
+<!Doctype html>
+<html ng-app="modelApp" ng-controller="modelListCtrl">
 <head>
     <meta charset="utf-8">
     <script src="/static/js/angularjs/angular.min.js"></script>
-    <script src="/static/js/test.js"></script>
-    <script src="/static/js/service.js"></script>
+    <script src="/static/js/htmlJs/test.js"></script>
+    <script src="/static/js/htmlJs/service.js"></script>
 </head>
 <body onload="autoclick()">
 <a href="http://www.jb51.net" id="auto" target="_blank">你也可以手动点击</a>
@@ -21,18 +23,18 @@
         </tr>
     </table>
 </div>
-<div>
-    <div ng-init="list = ['Chrome', 'Safari', 'Firefox', 'IE'] ">
-        <input ng-model="list" ng-list> <br>
-        <input ng-model="list" ng-list> <br>
-        <pre>list={{list}}</pre> <br>
-        <ol>
-            <li ng-repeat="item in list">
-                {{item}}
-            </li>
-        </ol>
-    </div>
-</div>
+<!--<div>-->
+    <!--<div ng-init="list = ['Chrome', 'Safari', 'Firefox', 'IE'] ">-->
+        <!--<input ng-model="list" ng-list> <br>-->
+        <!--<input ng-model="list" ng-list> <br>-->
+        <!--<pre>list={{list}}</pre> <br>-->
+        <!--<ol>-->
+            <!--<li ng-repeat="item in list">-->
+                <!--{{item}}-->
+            <!--</li>-->
+        <!--</ol>-->
+    <!--</div>-->
+<!--</div>-->
 </body>
 </html>
 

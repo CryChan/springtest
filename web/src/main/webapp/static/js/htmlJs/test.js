@@ -25,9 +25,10 @@ modelApp.filter('myfilter', function() {
 function modelListCtrl ($scope, $http) {
 
     $scope.show=function(){
-        testServices.get('/test/returnjson/?format=json',{},function(){
-            $scope.fruit = list;
-        });
+        //testServices.get('/test/returnjson/?format=json',{},function(){
+        //    $scope.fruit = list;
+        //});
+        $scope.fruit = list;
     }
 
     function init() {
