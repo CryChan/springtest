@@ -30,8 +30,8 @@ task createJavaProject(){
     file("/src/main/resources").mkdirs()
 //    file('/src/main/resources/spring.xml').createNewFile()
 
-//    file("src/test/java/com/viewmap").mkdirs()
-//    file('src/test/java/com/viewmap/package-info.java').createNewFile()
+    file("src/test/java/com/viewmap").mkdirs()
+    file('src/test/java/com/viewmap/package-info.java').createNewFile()
     file("/src/test/resources").mkdirs()
 //    file('src/test/resources/spring.xml').createNewFile()
 }

@@ -21,12 +21,12 @@ dependencies {
 task createJavaProject(){
 
 //        创建目录文件
-//    file("/src/main/java/com/viewmap").mkdirs()
+    file("/src/main/java").mkdirs()
 //    file('/src/main/java/com/viewmap/package-info.java').createNewFile()
     file("/src/main/resources").mkdirs()
     file('/src/main/resources/spring.xml').createNewFile()
 
-//    file("src/test/java/com/viewmap").mkdirs()
+    file("src/test/java").mkdirs()
 //    file('src/test/java/com/viewmap/package-info.java').createNewFile()
     file("/src/test/resources").mkdirs()
     file('src/test/resources/spring.xml').createNewFile()
