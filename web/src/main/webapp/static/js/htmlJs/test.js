@@ -25,19 +25,28 @@ modelApp.filter('myfilter', function() {
 function modelListCtrl ($scope, $http) {
 
     $scope.show=function(){
+        testService.get({},function(data){
+            $scope.fruit = data;
+        });
+        //$scope.fruits = list;
+        bool = !bool;
+    }
+
+    $scope.showjson=function(){
         //testServices.get('/test/returnjson/?format=json',{},function(){
         //    $scope.fruit = list;
         //});
-        $scope.fruit = list;
+        return bool;
     }
 
     function init() {
-        testService = new TestServices();
+        testService = new TestServices($http);
         list = [{name:"apple",price:"12",country:"China"},
                     {name:"banana",price:"14",country:"Afrian"},
-                    {name:"watermelome",price:"16",country:"Japan"}];
+                    {name:"watermelon",price:"16",country:"Japan"}];
     }
 
+    var bool = false;
     var list = [];
     var testService;
     init();

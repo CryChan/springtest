@@ -1,12 +1,12 @@
 <!Doctype html>
-<html ng-app="modelApp" ng-controller="modelListCtrl">
+<html>
 <head>
     <meta charset="utf-8">
     <script src="/static/js/angularjs/angular.min.js"></script>
     <script src="/static/js/htmlJs/test.js"></script>
     <script src="/static/js/htmlJs/service.js"></script>
 </head>
-<body onload="autoclick()">
+<body ng-app="modelApp" ng-controller="modelListCtrl">
 <a href="http://www.jb51.net" id="auto" target="_blank">你也可以手动点击</a>
 <input type="button" value="点一下" ng-click="show()">
 <div ng-show="showjson()">

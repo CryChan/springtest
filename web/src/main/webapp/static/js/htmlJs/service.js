@@ -1,10 +1,10 @@
 function TestServices($http){
     //get方法
-    this.get = function(url, jsonData, successCallback, errCallback){
+    this.get = function(jsonData, successCallback, errCallback){
         if($http!=undefined){
             var p = $http({
                 method : 'get',
-                url : url,
+                url : '/test/returnjson/?format=json',
                 params : jsonData,
                 headers : {
                     contentType : 'application/json;charset=UTF-8'
@@ -18,21 +18,22 @@ function TestServices($http){
                 if(typeof errCallback === 'function')
                     errCallback(data, status);
             });
-        }else{
-            $.ajax({
-                method : 'get',
-                url : url,
-                data: jsonData,
-                success: function(data, status){
-                    if(typeof successCallback === 'function')
-                        successCallback(data, status);
-                },
-                error:function(data, status){
-                    if(typeof errCallback === 'function')
-                        errCallback(data, status);
-                }
-            });
         }
+        //else{
+        //    $.ajax({
+        //        method : 'get',
+        //        url : url,
+        //        data: jsonData,
+        //        success: function(data, status){
+        //            if(typeof successCallback === 'function')
+        //                successCallback(data, status);
+        //        },
+        //        error:function(data, status){
+        //            if(typeof errCallback === 'function')
+        //                errCallback(data, status);
+        //        }
+        //    });
+        //}
     }
 
 }
