@@ -19,11 +19,11 @@
                      http://www.springframework.org/schema/mvc
                      http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
 
-    <!-- Enables the Spring MVC @Controller programming model -->
+    <!-- Enables the Spring MVC @Controller programming com.viewmap.com.transation.model -->
     <mvc:annotation-driven>
-        <!--<mvc:message-converters>-->
-            <!--<ref bean="fastJsonHttpMessageConverter" />-->
-        <!--</mvc:message-converters>-->
+        <mvc:message-converters>
+            <ref bean="fastJsonHttpMessageConverter" />
+        </mvc:message-converters>
     </mvc:annotation-driven>
 
     <!--静态文件访问的处理-->
@@ -42,6 +42,27 @@
             <!--</props>-->
         <!--</property>-->
     <!--</bean>-->
+
+    <!--配置json转换器-->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" >
+        <property name="messageConverters">
+            <list>
+                <ref bean="fastJsonHttpMessageConverter" /><!-- json转换器 -->
+            </list>
+        </property>
+    </bean>
+
+    <bean id="fastJsonHttpMessageConverter"
+          class="com.viewmap.common.FastJsonHttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>application/json; charset=utf-8</value>
+            </list>
+        </property>
+        <!--<property name="iTypeReference" ref="typeReferenceMaps" />-->
+    </bean>
+
+    <!--<bean id="typeReferenceMaps" class="cn.thinkjoy.zyj.common.TypeReferenceMaps" init-method="init"/>-->
 
     <!--多视图处理器-->
     <bean class="com.viewmap.common.MixedViewResolver">

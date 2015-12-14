@@ -36,7 +36,7 @@ function modelListCtrl ($scope, $http) {
         //testServices.get('/test/returnjson/?format=json',{},function(){
         //    $scope.fruit = list;
         //});
-        return bool;
+        return true;
     }
 
     function init() {

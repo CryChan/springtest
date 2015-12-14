@@ -4,7 +4,7 @@ function TestServices($http){
         if($http!=undefined){
             var p = $http({
                 method : 'get',
-                url : '/test/returnjson/?format=json',
+                url : '/test/returnjson?format=json',
                 params : jsonData,
                 headers : {
                     contentType : 'application/json;charset=UTF-8'
