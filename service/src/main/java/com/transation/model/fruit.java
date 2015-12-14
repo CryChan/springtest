@@ -1,9 +1,11 @@
-package model;
+package com.transation.model;
+
+import java.io.Serializable;
 
 /**
  * Created by Administrator on 2015/12/2.
  */
-public class fruit {
+public class fruit implements Serializable{
     private final String name;
     private final String price;
     private final String country;
@@ -43,7 +45,7 @@ public class fruit {
         }
 
         public buildfruit country(String country){
-            this.name = name;
+            this.country = country;
             return this;
         }
 
