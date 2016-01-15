@@ -9,13 +9,14 @@ sourceCompatibility = 1.5
 version = 1.0
 
 repositories {
-//    mavenLocal()
+    mavenLocal()
     mavenCentral()
     maven { url 'http://maven.oschina.net/content/groups/public/' }
 }
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.11',
+            //第三方的json依赖包
             'com.alibaba:fastjson:1.2.7'
     compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
     compile group: 'org.apache.velocity', name: 'velocity-tools', version: '2.0'
