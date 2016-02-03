@@ -1,6 +1,7 @@
 package com.transation.service.impl;
 
 import com.transation.dao.DemoDAO;
+import com.transation.model.Fruit;
 import com.transation.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
