@@ -1,8 +1,7 @@
 package com.viewmap.controller;
 
 
-import com.transation.model.Fruit;
-import com.transation.service.DemoService;
+import com.transation.model.fruit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +22,7 @@ import java.util.List;
 public class TestController {
 
     @Autowired
-    DemoService demoService;
+    com.transation.service.demoService demoService;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello(Model model) {
@@ -34,9 +33,9 @@ public class TestController {
     @RequestMapping(value = "/returnjson", method = RequestMethod.GET)
     public Object returnJson() {
 //        JSONArray jsonArray = new JSONArray();
-//        Fruit apple = new Fruit.buildfruit().name("apple").price("12").country("China").dobuild();
-//        Fruit banana = new Fruit.buildfruit().name("banana").price("14").country("Afrian").dobuild();
-//        Fruit watermelon = new Fruit.buildfruit().name("watermelon").price("16").country("Japan").dobuild();
+//        fruit apple = new fruit.buildfruit().name("apple").price("12").country("China").dobuild();
+//        fruit banana = new fruit.buildfruit().name("banana").price("14").country("Afrian").dobuild();
+//        fruit watermelon = new fruit.buildfruit().name("watermelon").price("16").country("Japan").dobuild();
         List list = new ArrayList();
 //        list.add(apple);
 //        list.add(banana);
@@ -49,7 +48,7 @@ public class TestController {
 
     @ResponseBody
     @RequestMapping(value = "/insertFruit", method = RequestMethod.POST)
-    public Object testDAO(@RequestBody Fruit fruit) {
+    public Object testDAO(@RequestBody fruit fruit) {
         try {
             int i = demoService.insert(fruit);
             return i;
