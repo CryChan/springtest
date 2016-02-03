@@ -7,34 +7,39 @@
     <script src="/static/js/htmlJs/service.js"></script>
 </head>
 <body ng-app="modelApp" ng-controller="modelListCtrl">
-<a href="http://www.jb51.net" id="auto" target="_blank">你也可以手动点击</a>
 <input type="button" value="点一下" ng-click="show()">
-<div ng-show="showjson()">
+<input type="button" value="新增" ng-click="showForm()">
+<div ng-show="Form">
+    <form>
+        <div>
+            name:   <input type="text" ng-model="name">
+        </div>
+        <div>
+            price:  <input type="text" ng-model="price">
+        </div>
+        <div>
+            country:<input type="text" ng-model="country">
+        </div>
+        <div>
+            <input type="button" value="提交" ng-click="submit()"/>
+            <input type="button" value="取消" ng-click="showform()"/>
+        </div>
+    </form>
+</div>
+<div>
     <table>
         <tr>
-            <td>fruit</td>
+            <td>Fruit</td>
             <td>price($ pre kg)</td>
             <td>country</td>
         </tr>
-        <tr ng-repeat="fruit in fruits">
-            <td>[[fruit.name]]</td>
-            <td>[[fruit.price]]</td>
-            <td>[[fruit.country]]</td>
+        <tr ng-repeat="Fruit in fruits">
+            <td>[[Fruit.name]]</td>
+            <td>[[Fruit.price]]</td>
+            <td>[[Fruit.country]]</td>
         </tr>
     </table>
 </div>
-<!--<div>-->
-    <!--<div ng-init="list = ['Chrome', 'Safari', 'Firefox', 'IE'] ">-->
-        <!--<input ng-com.viewmap.com.transation.model="list" ng-list> <br>-->
-        <!--<input ng-com.viewmap.com.transation.model="list" ng-list> <br>-->
-        <!--<pre>list={{list}}</pre> <br>-->
-        <!--<ol>-->
-            <!--<li ng-repeat="item in list">-->
-                <!--{{item}}-->
-            <!--</li>-->
-        <!--</ol>-->
-    <!--</div>-->
-<!--</div>-->
 </body>
 </html>
 
