@@ -67,7 +67,7 @@ public class FastJsonHttpMessageConverter<T> extends AbstractHttpMessageConverte
 
     @Override
     protected boolean supports(Class<?> clazz) {
-        return false;
+        return true;
     }
 
     @Override
