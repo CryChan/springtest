@@ -82,8 +82,4 @@
     </servlet-mapping>
 
 
-    <listener>
-        <listener-class>com.viewmap.common.ServClas</listener-class>
-    </listener>
-
 </web-app>
