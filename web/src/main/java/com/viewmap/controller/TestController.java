@@ -22,7 +22,7 @@ import java.util.List;
 public class TestController {
 
     @Autowired
-    com.transation.service.demoService demoService;
+    com.transation.service.DemoService demoService;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello(Model model) {
