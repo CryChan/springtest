@@ -33,7 +33,7 @@ proguard/
 *.ipr
 *.iws
 .idea/
-
+out/
 
 #eclipce配置
 .cproject
