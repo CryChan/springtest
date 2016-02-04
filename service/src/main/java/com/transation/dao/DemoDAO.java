@@ -1,6 +1,6 @@
 package com.transation.dao;
 
-import com.transation.model.fruit;
+import com.transation.model.Fruit;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -14,7 +14,7 @@ public interface DemoDAO {
 
     public int delete(Fruit fruit);
 
-    public List<fruit> select(Fruit fruit);
+    public List<Fruit> select(Fruit fruit);
 
     public int updata(@Param(value = "map")Map map);
 }
