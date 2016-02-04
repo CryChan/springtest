@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="springtest:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/springtest_jar</output-path>
-    <root id="archive" name="springtest.jar">
-      <element id="module-output" name="service" />
-      <element id="module-output" name="web" />
-    </root>
-  </artifact>
-</component>
