@@ -3,7 +3,7 @@ package com.transation.model;
 /**
  * Created by Administrator on 2016/2/3.
  */
-public class fruit {
+public class Fruit {
     private String name;
     private String price;
     private String country;
