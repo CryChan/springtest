@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.transation.dao.DemoDAO">
 
-    <insert id="insert" parameterType="com.transation.model.fruit">
+    <insert id="insert" parameterType="com.transation.model.Fruit">
         <selectKey keyProperty="id" resultType="String" order="BEFORE">
             select uuid()
         </selectKey>
@@ -25,7 +25,7 @@
         where id = {map.id}
     </update>
 
-    <delete id="delete" parameterType="com.transation.model.fruit">
+    <delete id="delete" parameterType="com.transation.model.Fruit">
         DELETE FROM fruit
         <where>
             <if test="id!=null">
@@ -43,7 +43,7 @@
         </where>
     </delete>
 
-    <select id="select" parameterType="com.transation.model.fruit" resultType="java.util.List">
+    <select id="select" parameterType="com.transation.model.Fruit" resultType="java.util.List">
         SELECT * from fruit
           <where>
               <if test="id!=null">
