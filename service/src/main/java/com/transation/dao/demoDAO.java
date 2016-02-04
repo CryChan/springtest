@@ -9,12 +9,12 @@ import java.util.Map;
 /**
  * Created by Administrator on 2015/12/28.
  */
-public interface demoDAO {
-    public int insert(fruit fruit);
+public interface DemoDAO {
+    public int insert(Fruit fruit);
 
-    public int delete(fruit fruit);
+    public int delete(Fruit fruit);
 
-    public List<fruit> select(fruit fruit);
+    public List<fruit> select(Fruit fruit);
 
     public int updata(@Param(value = "map")Map map);
 }
