@@ -1,4 +1,4 @@
-package com.viewmap.common;
+package com.common.resolver;
 
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.ViewResolver;

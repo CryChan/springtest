@@ -56,4 +56,6 @@ function TestServices($http){
             });
         }
     }
+
+    this.up
 }

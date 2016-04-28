@@ -1,12 +1,12 @@
-package com.viewmap.common;
+package com.common.resolver;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.parser.Feature;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.viewmap.commoniner.ITypeReference;
-import com.viewmap.commoniner.ResponseT;
-import com.viewmap.commoniner.RtnCodeEnum;
-import com.viewmap.commoniner.StringWrapper;
+import com.common.jsonWrapper.ITypeReference;
+import com.common.jsonWrapper.ResponseT;
+import com.common.jsonWrapper.RtnCodeEnum;
+import com.common.jsonWrapper.StringWrapper;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.HttpOutputMessage;
 import org.springframework.http.MediaType;

@@ -1,4 +1,4 @@
-package com.viewmap.controller;
+package com.view.controller;
 
 
 import com.transation.model.Fruit;
@@ -33,12 +33,17 @@ public class TestController {
     @RequestMapping(value = "/returnjson", method = RequestMethod.GET)
     public Object returnJson() {
 //        JSONArray jsonArray = new JSONArray();
-//        Fruit apple = new Fruit.buildfruit().name("apple").price("12").country("China").dobuild();
-//        Fruit banana = new Fruit.buildfruit().name("banana").price("14").country("Afrian").dobuild();
-//        Fruit watermelon = new Fruit.buildfruit().name("watermelon").price("16").country("Japan").dobuild();
+        Fruit apple = new Fruit();
+        apple.setName("apple");
+        apple.setPrice("12");
+        apple.setCountry("China");
+        Fruit banana = new Fruit();
+        banana.setName("banana");
+        banana.setPrice("14");
+        banana.setCountry("Afrian");
         List list = new ArrayList();
-//        list.add(apple);
-//        list.add(banana);
+        list.add(apple);
+        list.add(banana);
 //        list.add(watermelon);
 //        Bizdate bizdate = new Bizdate();
 //        bizdate.setRows(list);
@@ -56,6 +61,7 @@ public class TestController {
             throw e;
         }
     }
+
 
 }
 

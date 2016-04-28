@@ -32,7 +32,7 @@
 
 
     <!-- @Controller, @Service, @Configuration, etc. -->
-    <context:component-scan base-package="com.viewmap" />
+    <context:component-scan base-package="com.view" />
 
     <!--web.xml中的自定义view-->
     <!--<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
@@ -53,7 +53,7 @@
         </property>
     </bean>
     <bean id="fastJsonHttpMessageConverter"
-          class="com.viewmap.common.FastJsonHttpMessageConverter">
+          class="com.common.resolver.FastJsonHttpMessageConverter">
         <property name="supportedMediaTypes">
             <list>
                 <value>application/json; charset=utf-8</value>
@@ -65,7 +65,7 @@
     <!--<bean id="typeReferenceMaps" class="cn.thinkjoy.zyj.common.TypeReferenceMaps" init-method="init"/>-->
 
     <!--多视图处理器-->
-    <bean class="com.viewmap.common.MixedViewResolver">
+    <bean class="com.common.resolver.MixedViewResolver">
         <property name="resolvers">
             <map>
                 <!--<entry key="jsp">-->

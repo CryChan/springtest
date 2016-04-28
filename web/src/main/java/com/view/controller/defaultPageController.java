@@ -1,4 +1,4 @@
-package com.viewmap.controller;
+package com.view.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
